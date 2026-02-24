@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 36f83b29-9203-4fab-be59-a3e28c3117e8
+  title: Introduction to Python For Bioinformatics
+  # description:
+  # keywords: []
+  authors: [ "Peter van Heusden", "Prof Colin Venters"]
+  github: pvanheus/intro-to-python-book.git
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png

@@ -1,0 +1,11 @@
+[workspace]
+authors = ["Peter van Heusden <pvanheusden@uwc.ac.za>"]
+channels = ["conda-forge", "bioconda"]
+name = "teaching-book"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+jupyter-book = ">=2.1.2,<3"
