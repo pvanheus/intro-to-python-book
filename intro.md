@@ -1,4 +1,4 @@
-## Python for Bioinformatics
+# Python for Bioinformatics
 
 These pages contain the course materials for the [SANBI](https://www.sanbi.ac.za) introductory course on Python for bioinformatics. While you might find these materials useful even if you are not a student of bioinformatics, the examples chosen wil emphasis the use of the Python programming language in bioinformatics.
 
@@ -10,5 +10,6 @@ The second environment introduced during the course will be Python scripts on yo
 
 ### Course contents
 
+The course content is largely based on Justin Bois's [Introduction to Programming in the Biological Sciences Bootcamp](https://justinbois.github.io/bootcamp/2024/), with adaptions for our teaching environment and goals at SANBI.
 
 1. [Getting Started with Python and Jupyter Lab](/lessons/l01_welcome)
