@@ -1,18 +1,27 @@
+---
+kernelspec:
+    name: python3
+    display_name: 'Python 3'
+authors:
+    - name: Justin Bois
+    - name: Peter van Heusden
+---
+
 # Lesson 1: Welcome and Introduction to JupyterLab
 
 <hr/>
 
 ## Greetings!
 
-Welcome to the Introduction to Programming for the Biological Sciences Bootcamp!  We will be using Python as the programming language, and we will use this first lesson to make sure your Python distribution is working properly. We will also make sure you have a way to use the command line on your machine.
+Welcome to the Introduction to Python for Bioinformatics!  We will be introducing you to Python, a programming language that is widely used in bioinformatics and data science more broadly. 
 
-Prior to starting the bootcamp, you should have completed [Lesson 0: Configuring your computer](l00_configuring_your_computer.ipynb).
+We will start by using the environment at https://jupyterhub.sanbi.ac.za/jupyterhub, which we will refer to in these materials as "the Jupyter Hub". Later in the course, show you have to install a Python environment on your own computer.
 
 ## The Python interpreter
 
-Before diving into the Python interpreter, I pause here to remind you that this programming bootcamp is not meant to teach Python syntax (though you will learn that). The things you learn here are meant to help you understand, and ultimately do, computer programming more generally. Think of it this way: this bootcamp is meant to help you unleash the power of your computer on your biological problems. Python is just the language of instruction. That said, let's start talking about how Python works.
+Before diving into the Python interpreter, we pause here to remind you that this programming bootcamp is not meant to teach Python syntax (though you will learn that). The things you learn here are meant to help you understand, and ultimately do, computer programming more generally. Think of it this way: this bootcamp is meant to help you unleash the power of your computer on your biological problems. Python is just the language of instruction. That said, let's start talking about how Python works.
 
-Python is an **interpreted language**, which means that each line of code you write is translated, or *interpreted*, into a set of instructions that your machine can understand by the **Python interpreter**. This stands in contrast to **compiled languages**.  For these languages (the dominant ones being Fortran, C, and C++), your entire code is translated into machine language before you ever run it. When you execute your program, it is already in machine language.
+Python is an **interpreted language**, which means that each line of code you write is translated, or *interpreted*, into a set of instructions that your machine can understand by the **Python interpreter**. This stands in contrast to **compiled languages**.  For these languages (the dominant ones being Rust, C, and C++), your entire code is translated into machine language before you ever run it. When you execute your program, it is already in machine language.
 
 So, whenever you want your Python code to run, you give it to the Python interpreter.
 
@@ -24,30 +33,30 @@ on the command line of a terminal. This launches the vanilla Python interpreter.
 
 ## Hello, world. and the print() function
 
-Traditionally, the first program anyone writes when learning a new language is called "`Hello, world.`" In this program, the words "`Hello, world.`" are printed on the screen.  The original `Hello, world.` was likely written by Brian Kernighan, one of the inventors of Unix, and the author of the classic and authoritative [book](http://www.amazon.com/The-Programming-Language-Brian-Kernighan/dp/0131103628) on the C programming language. In his original, the printed text was "`hello, world`" (no period or capital `H`), but people use lots of variants.
+Traditionally, the first program anyone writes when learning a new language is called "`Hello, world.`" In this program, the words "`Hello, world.`" are printed on the screen. [^original-hello-world]
 
-We will first write and run this little program using a JupyterLab console. After launching JupyterLab, you probably already have the Launcher in your JupyterLab window. If you do not, you can expand the `Files` tab at the left of your JupyterLab window (if it is not already expanded) by clicking on that tab, or alternatively hit `ctrl+b` (or `cmd+b` on macOS). At the top of the `Files` tab is a `+` sign, which gives you a Jupyter Launcher.
+[^original-hello-world]: The original `Hello, world.` was likely written by Brian Kernighan, one of the inventors of Unix, and the author of the classic and authoritative [book](http://www.amazon.com/The-Programming-Language-Brian-Kernighan/dp/0131103628) on the C programming language. In his original, the printed text was "`hello, world`" (no period or capital `H`), but people use lots of variants.
+
+We will first write and run this little program using a JupyterLab console. After logging in to the Jupyer Hub After launching JupyterLab, you probably already have the Launcher expanded in your JupyterLab window. If you do not, you can expand the `Files` tab at the left of your JupyterLab window (if it is not already expanded) by clicking on that tab, or alternatively hit `ctrl+b` (or `cmd+b` on macOS). At the top of the `Files` tab is a `+` sign, which gives you a Jupyter Launcher.
 
 In the Jupyter Launcher, click the `Python 3` icon under `Console`. This will launch a console, which has a large white space above a prompt that says `In []:`. You can enter Python code in this prompt, and it will be executed.
 
 To print `Hello, world.`, enter the code below. To execute the code, hit `shift+enter`.
 
 
-```python
+```{code-cell} python
 print('Hello, world.')
 ```
 
-    Hello, world.
 
-
-Hooray!  We just printed `Hello, world.` to the screen. To do this, we used Python's built-in `print()` function.  The `print()` function takes as an **argument** a **string**. It then prints that string to the screen. We will learn more about function syntax later, but we can already see the rough syntax with the `print()` function.
+Hooray!  We just printed `Hello, world.` to the screen. To do this, we used Python's built-in `print()` function.  The `print()` function takes as an **argument** (also known as a **parameter**) a **string**. It then prints that string to the screen. We will learn more about function syntax later, but we can already see the rough syntax with the `print()` function.
 
 ## .py files
 
 Now let's use our new knowledge of the `print()` function to have our computer say a bit more than just `Hello, world.` Type these lines in at the prompt, hitting `enter` each time you need a new line. After you've typed them all in, hit `shift+enter` to run them.
 
 
-```python
+```{code-cell} python
 # The first few lines from The Zen of Python by Tim Peters
 print('Beautiful is better than ugly.')
 print('Explicit is better than implicit.')
@@ -55,22 +64,18 @@ print('Simple is better than complex.')
 print('Complex is better than complicated.')
 ```
 
-    Beautiful is better than ugly.
-    Explicit is better than implicit.
-    Simple is better than complex.
-    Complex is better than complicated.
-
-
 Note that the first line is preceded with a `#` sign, and the Python interpreter ignored it. The `#` sign denotes a **comment**, which is ignored by the interpreter, *but very very important for the human!*
 
 While the console prompt was nice for entering all of this, a better option is to store them in a file, and then have the Python interpreter run the lines in the file. This is how you typically store Python code, and the suffix of such files is `.py`.
 
 So, let's create a `.py` file. To do this, use the JupyterLab Launcher to launch a text editor. Once it is launched, you can right click on the tab of the text editor window to change the name. We will call this file `zen.py`. Within this file, enter the four lines of code  you previously entered in the console prompt. Be sure to save it.
 
-To run the code in this file, you can invoke the Python interpreter at the command line, followed by the file name. I.e., enter
+To run the code in this file, you can return to the Launcher and start a terminal, within which you can invoke the Python interpreter at the command line, followed by the file name. I.e., enter
 
-    python zen.py
-   
+```bash
+python zen.py
+```
+
 at the command line. Note that when you run code this way, the interpreter exits after completion of running the code, and you do not get a prompt.
 
 To run the code in this file using the Jupyter console, you can use the `%run` **magic function**.
@@ -103,7 +108,7 @@ Central to Jupyter/JupyterLab are **Jupyter notebooks**. In fact, the document y
 
 ## Why Jupyter notebooks?
 
-When writing code you will reuse, you should develop fully tested modules using `.py` files. You can always import those modules when you are using a Jupyter notebook (more on modules and importing them later in the bootcamp). So, a Jupyter notebook is *not* a good for an application where you are building reusable code or scripts. However, Jupyter notebooks are **very** useful in the following applications.
+When writing code you will reuse, you should develop fully tested modules using `.py` files. You can always import those modules when you are using a Jupyter notebook (more on modules and importing them later in the bootcamp). So, a Jupyter notebook is *not* a good way to write an application where you are building reusable code or scripts. However, Jupyter notebooks are **very** useful in the following applications.
 
 1. *Exploring data/analysis.* Jupyter notebooks are great for trying things out with code, or exploring a data set. This is an important part of the research process. The layout of Jupyter notebooks is great for organizing thoughts as you synthesize them.
 2. *Developing image processing pipelines.* This is really just a special case of (1), but it worth mentioning separately because Jupyter notebooks are especially useful when figuring out what steps are best for extracting useful data from images, which happens all-too-often in biology. Using the Jupyter notebook, you can write down what you hope to accomplish in each step of processing and then graphically show the results as images as you go through the analysis. We will do this later in the bootcamp.
@@ -135,18 +140,16 @@ In general, when you want to add a new cell, you can click the `+` icon on the n
 Below is an example of a code cell printing `hello, world.` Notice that the output of the print statement appears in the same cell, though separate from the code block.
 
 
-```python
+```{code-cell} python
 # Say hello to the world.
 print('hello, world.')
 ```
-
-    hello, world.
 
 
 If you evaluate a Python expression that returns a value, that value is displayed as output of the code cell. This only happens for the last line of the code cell.
 
 
-```python
+```{code-cell} python
 # Would show 9 if this were the last line, but it is not, so shows nothing
 4 + 5
 
@@ -154,37 +157,24 @@ If you evaluate a Python expression that returns a value, that value is displaye
 5 + 6
 ```
 
-
-
-
-    11
-
-
-
 Note, however, if the last line does not return a value, such as if we assigned value to a variable, there is no visible output from the code cell.
 
 
-```python
+```{code-cell} python
 # Variable assignment, so no visible output.
 a = 5 + 6
 ```
 
 
-```python
+```{code-cell} python
 # However, now if we ask for a, its value will be displayed
 a
 ```
 
 
-
-
-    11
-
-
-
 ### Display of graphics
 
-When we learn about plotting with [Bokeh](https://bokeh.pydata.org/) later in the bootcamp, you will learn about displaying graphics in Jupyter notebooks.
+When we learn about plotting with [Vega-Altair]https://altair-viz.github.io/) later in the bootcamp, you will learn about displaying graphics in Jupyter notebooks.
 
 ### Quick keys
 
@@ -211,16 +201,15 @@ At the end of every lesson, and indeed at the end (or beginning) of any notebook
 
 We use the `-v` flag to ask watermark to give us the Python and IPython verison numbers and the `-p` flag to give us version numbers on specified packages we've used. We can also use a `-m` flag to give information about the machine running the notebook, and you should do that, but I will not do that for the bootcamp to avoid clutter.
 
+```{code-cell} python
+:tags: remove-input
+# this is just so that in the next cell it shows the version of the jupyterlab module
+import watermark
+```
 
-```python
+```{code-cell} python
 %load_ext watermark
 %watermark -v -p jupyterlab
 ```
 
-    Python implementation: CPython
-    Python version       : 3.11.9
-    IPython version      : 8.20.0
-    
-    jupyterlab: 4.0.13
-    
 

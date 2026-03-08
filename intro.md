@@ -1,3 +1,14 @@
-### Front matter
+## Python for Bioinformatics
 
-See the [first lesson](/lessons/l01_welcome)
+These pages contain the course materials for the [SANBI](https://www.sanbi.ac.za) introductory course on Python for bioinformatics. While you might find these materials useful even if you are not a student of bioinformatics, the examples chosen wil emphasis the use of the Python programming language in bioinformatics.
+
+The course will use two environments. We will start with the [Jupyter Lab](https://jupyter.org/) environment, a web-based environment for Python coding that uses "notebooks" for data analysis. While you can install Jupyter Lab on your own computer, we will provide a Jupyter Lab environment for you so that all you need to get started is a web browser. This environment is available at https://jupyterhub.sanbi.ac.za/jupyterhub. You need a login to use this environment and these will be provided during the course.
+
+We have chosen the Jupyter environment because it is a powerful and user-friendly environment for exploratory data processing and also because a similar environment is provided by the [Ilifu](https://ilifu.ac.za/) research computing environment. The Ilifu environment is much larger than the environment we are using for teaching and we recommend that for your own research you use either your own computer or, if you have access, the Ilifu environment.
+
+The second environment introduced during the course will be Python scripts on your own computer. Writing code in scripts allows us to create modules of code that can be re-used, either by ourselves or others. These scripts will be your first steps into software engineering, a descipline that deals with the design, development, testing and maintenance of software applications. As scientific research involves the use of such applications, understanding how to discipline ourselves to build them, starting with simple scripts, is an essential skill in the modern scientist's toolbox.
+
+### Course contents
+
+
+1. [Getting Started with Python and Jupyter Lab](/lessons/l01_welcome)

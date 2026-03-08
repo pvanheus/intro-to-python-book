@@ -9,3 +9,5 @@ version = "0.1.0"
 
 [dependencies]
 jupyter-book = ">=2.1.2,<3"
+watermark = ">=2.6.0,<3"
+jupyterlab = ">=4.5.5,<5"
