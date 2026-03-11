@@ -14,6 +14,14 @@ project:
     - file: lessons/l03_variables_operators_types.md
     - file: lessons/l04_more_operators_and_conditionals.md
     - file: exercises/ex1_strings_numbers_conditionals.md
+  downloads:
+    - id: output-pdf
+      title: PDF version of the content
+  exports:
+    - format: typst
+      template: plain_typst_book
+      output: exports/intro-to-python-book.pdf
+      id: output-pdf
 site:
   template: book-theme
   nav: []
