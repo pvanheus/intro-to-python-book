@@ -8,8 +8,15 @@ project:
   authors: [ "Peter van Heusden", "Prof Colin Venters"]
   github: pvanheus/intro-to-python-book.git
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: intro.md
+    - file: lessons/l01_welcome.md
+    - file: lessons/l03_variables_operators_types.md
+    - file: lessons/l04_more_operators_and_conditionals.md
+    - file: exercises/ex1_strings_numbers_conditionals.md
 site:
   template: book-theme
+  nav: []
   options:
     favicon: images/favicon.jpg
     logo: images/SANBI_logo-2.png

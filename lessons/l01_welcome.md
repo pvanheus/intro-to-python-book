@@ -1,7 +1,8 @@
 ---
 kernelspec:
     name: python3
-    display_name: 'Python 3'
+    language: python
+    display_name: Python 3 (ipykernel)
 authors:
     - name: Justin Bois
     - name: Peter van Heusden
