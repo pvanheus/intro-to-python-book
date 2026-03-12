@@ -4,3 +4,6 @@
 
 # MyST build outputs
 _build
+
+# Ignore exported artefacts
+exports/

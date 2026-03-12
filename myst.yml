@@ -14,6 +14,9 @@ project:
     - file: lessons/l03_variables_operators_types.md
     - file: lessons/l04_more_operators_and_conditionals.md
     - file: exercises/ex1_strings_numbers_conditionals.md
+    - file: lessons/l05_lists_and_tuples.md
+    - file: lessons/l06_iteration.md
+    - file: exercises/ex2_lists_tuples_and_iteration.md
   downloads:
     - id: output-pdf
       title: PDF version of the content
