@@ -222,7 +222,7 @@ my_integers
 
 Note that we used the underscore, `_`, as a throwaway variable that we do not use. There is no rule for this, but this is generally accepted Python syntax and helps signal that you are not going to use the variable.
 
-One last gotcha: if we tried to do a similar technique with a string, we get a `TypeError` because a string is immutable. We'll revisit examples like this in [lesson 8](l08_string_methods.ipynb).
+One last gotcha: if we tried to do a similar technique with a string, we get a `TypeError` because a string is immutable. We'll revisit examples like this in *TODO reference lesson 8*.
 
 ```{code-cell} ipython3
 :tags: [raises-exception]
