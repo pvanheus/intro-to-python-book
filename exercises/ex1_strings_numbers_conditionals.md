@@ -40,7 +40,7 @@ if new_match == best_match_identity:
 3. If you wanted to see if your new match has better identify than the current match, could you use the following code? Explain why and why the answer might be different to the previous question
 
 ```python
-if new_match > best_match_identify:
+if new_match > best_match_identity:
     print('The new match is better than the current best match')
 ```
 
