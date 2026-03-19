@@ -346,7 +346,7 @@ You may be thinking that anonymous functions run contrary to the idea that all f
 sorted(['Kellyn Acosta', 'Jesus Murillo', 'Gareth Bale'])
 ```
 
-This sorted by their first names, but we want to sort for their last names. As we will learn in the [next lesson on string methods](l08_string_methods.ipynb), we can find the index of a space in a string using `my_string.find(' ')`, so that the letter at the start of a last name for a player with string `x` is `x[x.find(' ')+1]`. We can use a lambda function to give this as the key and get a nicely sorted list.
+This sorted by their first names, but we want to sort for their last names. As we will learn in the [next lesson on string methods](/lessons/l08_string_methods), we can find the index of a space in a string using `my_string.find(' ')`, so that the letter at the start of a last name for a player with string `x` is `x[x.find(' ')+1]`. We can use a lambda function to give this as the key and get a nicely sorted list.
 
 ```{code-cell} ipython3
 sorted(['Kellyn Acosta', 'Jesus Murillo', 'Gareth Bale'], key=lambda x: x[x.find(' ')+1])

@@ -49,7 +49,7 @@ We'll start by revisiting some of the examples we've seen so far.
 
 ### Computing GC content
 
-If you remember from the [iteration lesson](l06_iteration.ipynb), we started by computing the GC content of a nucleic acid sequence. We counted the occurrences of `'G'` and `'C'` in the string using a **`for`** loop. We can use the `count()` string method do to this.
+If you remember from the [iteration lesson](/lessons/l06_iteration), we started by computing the GC content of a nucleic acid sequence. We counted the occurrences of `'G'` and `'C'` in the string using a **`for`** loop. We can use the `count()` string method do to this.
 
 ```{code-cell} ipython3
 # Define sequence
@@ -82,7 +82,7 @@ seq.count('nonsense')
 
 ### Finding the index of a start codon
 
-Another task in the [iteration lesson](l06_iteration.ipynb) was to find the index of the start codon in an RNA sequence. Let's do it with another string method.
+Another task in the [iteration lesson](/lessons/l06_iteration) was to find the index of the start codon in an RNA sequence. Let's do it with another string method.
 
 ```{code-cell} ipython3
 seq.find('AUG')
@@ -110,7 +110,7 @@ seq.rfind('AUG')
 
 ### Finding the complementary base
 
-In our [lesson on functions](l07_intro_to_functions.ipynb), we wrote a function to compute a complementary base comparing against both the capital and lowercase letter. Here is that function implemented with some handy string methods.
+In our [lesson on functions](/lessons/l07_functions), we wrote a function to compute a complementary base comparing against both the capital and lowercase letter. Here is that function implemented with some handy string methods.
 
 ```{code-cell} ipython3
 def complement_base(base):
