@@ -231,6 +231,7 @@ Let's pause for a moment and think about what the `complement_base()` and `rever
 
 +++
 
+(keyword-arguments)=
 ## Keyword arguments
 
 Now let's say that instead of the reverse DNA complement, we want the reverse RNA complement. We could re-write the `complement_base()` function to do this. Better yet, let's modify it.

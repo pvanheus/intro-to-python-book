@@ -128,7 +128,7 @@ for i in range(10):
     print(i, end='  ')
 ```
 
-We see that `range(10)` gives us ten numbers, from `0` to `9`. As with indexing, `range()` inclusively starts at zero by default, and the ending is exclusive.
+We see that `range(10)` gives us ten numbers, from `0` to `9`. As with indexing, `range()` inclusively starts at zero by default, and the ending is exclusive. (Notice that we've used the keyword argument `end=` for print. This means that instead of putting a newline (`\n') at the end of what is printed, a space will be used. We'll have more on [keyword arguments](#keyword-arguments) in the next lesson.)
 
 It turns out that the arguments of the `range()` function work much like indexing. If you have a single argument, you get that many integers, starting at 0 and incrementing by one. If you give two arguments, you start inclusively at the first and increment by one ending exclusively at the second argument. Finally, you can specify a stride with the third argument.
 
@@ -320,10 +320,10 @@ while seq[i:i+3] != codon and i < len(seq):
     i += 1
     
 # Show the result
-if i == len(seq):
-    print('Codon not found in sequence.')
-else:
+if i < len(seq):
     print('The codon starts at index', i)
+else:
+    print('Codon not found in sequence.')
 ```
 
 ### **for** vs **while**
@@ -337,19 +337,51 @@ Most anything that requires a loop can be done with either a `for` loop or a `wh
 Iteration stops in a `for` loop when the iterator is exhausted. It stops in a `while` loop when the conditional evaluates to `False`. These is another way to stop iteration: the `break` keyword. Whenever `break` is encountered in a `for` or `while` loop, the iteration halts and execution continues outside the loop. As an example, we'll do the calculation above with a `for` loop with a `break` instead of a `while` loop.
 
 ```{code-cell} ipython3
-# Define start codon
-start_codon = 'AUG'
+seq = 'GACAGACUCCAUGNNNNNNNCACGUGGGUAUCUGUC'
 
-# Scan sequence until we hit the start codon
+start_codon = 'AUC'
+
 for i in range(len(seq)):
     if seq[i:i+3] == start_codon:
         print('The start codon starts at index', i)
         break
 else:
-    print('Codon not found in sequence.')
+    print('No start codon found')
+```
+Notice that we have an `else` block after the `for` loop. In Python, `for` and `while` loops can have an `else` statement after the code block to be evaluated in the loop. The contents of the `else` block are evaluated if the loop completes *without* encountering a `break`. In this way the `else` functions quite similarly to the `else` in the final `if` statement in our last `while` loop example. The code in the `else` clause is only run if we don't break out of the loop early using the `break` statement.
+
+## The **continue** keyword
+
+In addition to `break`, we can skip a loop iteration using **continue**. The rest of the loop body gets skipped but rather than breaking out of the loop entirely, the loop continues on to the next iteration.
+
+In the following example, we have included the lines in a `FINDHOM` output files as a list called `lines`. The `FINDHOM` output uses the convention that any line starting with a `#` is a comment line and can be skipped. In the Python code, this means that any line starting with `#` is skipped and not searched for the `search_term`. Like in the previous example `break` is used to drop out of the loop early if the `search_term` is found and `else` is used to add something to do if the `search_term` is not found at all.
+
+```{code-cell} ipython3
+lines = [
+    "#FINDHOM v 1.2:\n",
+    "#Search results:\n",
+    "Query\tMatch fraction\tScore\tSubject\n",
+    "SMPL001\t0.7\t12331\tAQ10213 Phlebotomus perniciosus\n",
+    "SMPL003\t0.5\t6032\tBZ102363 Phlebotomus papatasi\n",
+    "SMPL004\t0.8\t13123\tRD178237 Sergentomyia dubia\n",
+    "SMPL007\t0.6\t10610\tBQ187981 Phlebotomus papatasi\n"
+]
+
+# Search term
+search_term = "Sergentomyia"
+# Scan sequence until we hit the start codon
+for i, line in enumerate(lines):
+    if len(line) >= 1 and line[0] == '#':
+        # don't process comment lines
+        continue
+    if search_term in line:
+        print(search_term, 'found on line', i+1)
+        break
+else:
+    print(search_term, 'found in output.')
 ```
 
-Notice that we have an `else` block after the `for` loop. In Python, `for` and `while` loops can have an `else` statement after the code block to be evaluated in the loop. The contents of the `else` block are evaluated if the loop completes *without* encountering a `break`.
+As we head towards the next lesson, consider what might benefit from re-use in this example. In the for loop, we are searching for the text in the `search_term` variable. Re-using a block of code is what functions are for, as we'll see in the next lesson.
 
 +++
 
