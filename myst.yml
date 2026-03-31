@@ -18,7 +18,7 @@ project:
     - file: lessons/l06_iteration.md
     - file: lessons/l07_functions.md
     - file: lessons/l08_string_methods.md
-    # - file: exercises/ex2_lists_tuples_and_iteration.md
+    - file: exercises/ex2_lists_tuples_and_iteration.md
   downloads:
     - id: output-pdf
       title: PDF version of the content
