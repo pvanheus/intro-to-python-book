@@ -37,8 +37,10 @@ sample_matches = [
  
 3. Write a function `find_good_matches` that takes a match threshold (e.g. `0.7`) and a list like the one presented as `good_matches` and returns a list of tuples where each tuple contains the sample name and the percentage match for samples over match threshold.
 
-4. Write a function `double_it` that takes a list of numbers and doubles each of them *in place*.
+4. Write a function `sum_it(a, b)` that takes two numbers, `a` and `b` and returns the result of adding them together. Then write a function `print_sum(a, b)` that takes two numbers, `a` and `b` and prints the result of adding the two numbers together. What is the difference between these two functions? Which one returns a value?
 
-5. What effect does the `double_it` function have on the original list that you pass as a parameter to the `double_it` function? What is this effect called?
+5. Write a function `double_it` that takes a list of numbers and doubles each of them *in place*.
 
-6. Write a function `double_it2` that takes a list of numbers and returns a new list of the numbers, doubled. Would `double_it2` work with a tuple of numbers? Would `double_it` work with a tuple? Why?
+6. What effect does the `double_it` function have on the original list that you pass as a parameter to the `double_it` function? What is this effect called?
+
+7. Write a function `double_it2` that takes a list of numbers and returns a new list of the numbers, doubled. Would `double_it2` work with a tuple of numbers? Would `double_it` work with a tuple? Why?

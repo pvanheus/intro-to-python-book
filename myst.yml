@@ -17,8 +17,9 @@ project:
     - file: lessons/l05_lists_and_tuples.md
     - file: lessons/l06_iteration.md
     - file: lessons/l07_functions.md
-    - file: lessons/l08_string_methods.md
     - file: exercises/ex2_lists_tuples_and_iteration.md
+    - file: lessons/l08_string_methods.md
+    - file: lessons/l09_dictionaries.md
   downloads:
     - id: output-pdf
       title: PDF version of the content
