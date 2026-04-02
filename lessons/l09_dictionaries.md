@@ -160,8 +160,6 @@ codons = dict(zip(codon_list, amino_acids))
 print(codons)
 ```
 
-These two dictionaries are particularly useful, so I put them in a little module which we will discuss in the [next lesson on packages and modules](l10_packages_and_modules.ipynb).
-
 +++
 
 ## A dictionary is an implementation of a hash table
@@ -383,7 +381,7 @@ As you may guess, the dictionary method `pop()` has an analog that works for lis
 
 ## Using dictionaries as kwargs
 
-A nifty feature of dictionaries is that they can be passed into functions as keyword arguments. We covered named keyword arguments in the [Intro to functions lesson](l07_intro_to_functions.ipynb). In addition to the named keyword arguments, a function can take in arbitrary keyword arguments (**not** arbitrary non-keyword arguments). This is specified in the function definition by including a last argument with a double-asterisk, `**`. The kwargs with the double-asterisk get passed in as a dictionary.
+A nifty feature of dictionaries is that they can be passed into functions as keyword arguments. We covered named keyword arguments in the [Intro to functions lesson](/lessons/l07_functions). In addition to the named keyword arguments, a function can take in arbitrary keyword arguments (**not** arbitrary non-keyword arguments). This is specified in the function definition by including a last argument with a double-asterisk, `**`. The kwargs with the double-asterisk get passed in as a dictionary.
 
 ```{code-cell} ipython3
 def concatenate_sequences(a, b, **kwargs):
