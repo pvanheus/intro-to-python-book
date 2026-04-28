@@ -430,6 +430,65 @@ restriction_dict = {"KpnI": "GGTACC", "HindII": "AAGCTT", "ecoRI": "GAATTC"}
 dict(**my_dict, **restriction_dict, another_seq="AGTGTAGTG")
 ```
 
+## Sets
+
+A set in Python is somewhat like the keys of a dictionary. All elements are unique and all values in the set must be hashable (that is, they must be from an immutable type). The set type useful if you want to ensure that you are storing a unique collection.
+
+A set can be created using the set literal syntax:
+
+```{code-cell} ipython3
+my_set = {'apple', 'pear', 'orange'}
+my_set
+```
+
+As you can see, this syntax resembles the dictionary literal syntax but instead of adding pairs of keys and values, one is simply adding elements. There is also the `set()` function, which takes as a parameter an iterable sequence, such as a list or a string:
+
+```{code-cell} ipython3
+my_set = set(['apple', 'pear', 'orange'])
+print(my_set)
+vowels = set('aeiou')
+print('a set of vowels:', vowels)
+```
+
+As all elements of a set are unique, you can use the set datatype to collect the unique members of a list:
+
+```{code-cell} ipython3
+students = ['Thandi', 'Ben', 'Peter', 'Kelly', 'Ben', 'Kelley']
+student_set = set()
+for student in students:
+    student_set.add(student)
+print('Unique students:', student_set)
+```
+
+As seen in this example, you add to a set with `.add()`. The `in` operator allows one to see which elements are already in a set:
+
+```{code-cell} ipython3
+samples = set(['AZ1013', 'PQ10321', 'LK45543', 'QR1362', 'ZZ984124'])
+
+def known_sample(samples, sample_id):
+    if sample_id in samples:
+        return True
+    else:
+        return False
+
+sample_id = 'QR1362'
+if known_sample(samples, sample_id):
+    print(sample_id, 'is known')
+else:
+    print(sample_id, 'unknown')
+```
+
+Sets provide methods for common set operations like difference and union, many of which have equivalent operators:
+
+| method | effect | operator |
+|:-------|:-------|:---------|
+|`s1.union(s2)` | the union of s1 and s2 | `|` |
+|`s1.intersection(s2)` | the intersection of s1 and s2 | `&` |
+|`s1.difference(s2)` | the members of s1 that are not in s2 | `-` |
+|`s1.symmetric_difference(s2)` | the members that are either in s1 or s2 but not both | `^` |
+
+For more on sets, read [this post on Real Python](https://realpython.com/python-sets/).
+
 ## Computing environment
 
 ```{code-cell} ipython3
