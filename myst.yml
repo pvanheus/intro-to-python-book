@@ -24,6 +24,8 @@ project:
     - file: lessons/l08_string_methods.md
     - file: session_notebooks/lesson8.ipynb
     - file: lessons/l09_dictionaries.md
+    - file: exercises/ex3_string_methods_dictionaries.md
+    - file: exercises/ex3_working.ipynb
   downloads:
     - id: output-pdf
       title: PDF version of the content
